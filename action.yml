@@ -1,0 +1,22 @@
+# action.yml
+name: 'Jinja2 Templating'
+description: 'jinja Templating Engine'
+inputs:
+  data:  # id of input
+    description: 'key value data'
+    required: false
+    default: 'None'
+  datafile:
+    description: 'key value file'
+    required: false
+    default: 'None'
+  path:
+    description: 'path to target render'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.data }}
+    - ${{ inputs.datafile}}
+    - ${{ inputs.path }}
