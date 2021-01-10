@@ -9,7 +9,17 @@ jobs:
       - name: '[run] simple'
         uses: ./
         with:
-          data: user=DE
+          data: |
+            user=DE
+            status=Completed
+          path: tests/test_template.py
+      - name: '[test] simple'
+        run: cat tests/test_template.py
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: '[run] simple'
+        uses: ./
+        with:
           datafile: tests/template_data.json
           path: tests/test_template.py
       - name: '[test] simple'
