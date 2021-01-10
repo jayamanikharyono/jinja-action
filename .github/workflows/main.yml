@@ -6,19 +6,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: '[run] simple'
+      - name: '[run] single'
         uses: ./
         with:
           data: repo_name=${{ github.event.repository.name }}
           path: tests/test_template_single.py
-      - name: '[test] simple'
+      - name: '[test] single'
         run: cat tests/test_template_single.py
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: '[run] simple'
+      - name: '[run] multi'
         uses: ./
         with:
           datafile: tests/template_data.json
           path: tests/multi/*
-      - name: '[test] simple'
+      - name: '[test] multi'
         run: cat tests/multi/test_template_multi.py

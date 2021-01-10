@@ -2,6 +2,7 @@
 
 Jinja2 is a fast and straightforward templating engine. You can use this action to easily run it in your GitHub workflows. This Action support per files templating and per dir (by patern) templating.
 
+![Main CI/CD Pipeline](https://github.com/jayamanikharyono/jinja-action/workflows/Main%20CI/CD%20Pipeline/badge.svg)
 
 ## Using Action Inputs
 ```yml
