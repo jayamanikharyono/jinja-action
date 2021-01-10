@@ -9,18 +9,16 @@ jobs:
       - name: '[run] simple'
         uses: ./
         with:
-          data: |
-            user=DE
-            status=Completed
-          path: tests/test_template.py
+          data: repo_name=${{ github.event.repository.name }}
+          path: tests/test_template_single.py
       - name: '[test] simple'
-        run: cat tests/test_template.py
+        run: cat tests/test_template_single.py
       - name: Checkout
         uses: actions/checkout@v2
       - name: '[run] simple'
         uses: ./
         with:
           datafile: tests/template_data.json
-          path: tests/test_template.py
+          path: tests/multi/*
       - name: '[test] simple'
-        run: cat tests/test_template.py
+        run: cat tests/test_template_multi.py
