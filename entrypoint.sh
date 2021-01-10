@@ -1,11 +1,11 @@
-#!/bin/sh -l
+#!/bin/bash
 
 echo "Data: $1"
 echo "Data File: $2"
 echo "Path: $3"
 
 #example dir=`ls ./airflow/dags/*.py`
-if [[ $1 == 'None' && $2 == 'None' ]];
+if [[ $1 == "None" && $2 == "None" ]] ;
 then
 	echo 'Provide Key Value Mapping'
 	exit 1
@@ -13,7 +13,7 @@ fi
 
 echo 'Templating Start'
 
-if [ '$1' != 'None' ];
+if [[ $1 != 'None' ]];
 then
   dir=`ls $3`
 
@@ -30,12 +30,12 @@ then
   done
 fi
 
-if [ '$2' != 'None' ];
+if [[ $2 != 'None' ]];
 then
   dir=`ls $3`
   for eachfile in $dir;
   do
-     jinja2 --strict $eachfile $2 > "${eachfile}_"
+     jinja2 --strict $eachfile $2 --format json > "${eachfile}_"
      echo $eachfile
   done
 
