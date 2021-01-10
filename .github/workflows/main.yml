@@ -21,4 +21,4 @@ jobs:
           datafile: tests/template_data.json
           path: tests/multi/*
       - name: '[test] simple'
-        run: cat tests/test_template_multi.py
+        run: cat tests/multi/test_template_multi.py

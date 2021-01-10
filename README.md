@@ -19,5 +19,4 @@ Jinja2 is a fast and straightforward templating engine. You can use this action 
   with:
     datafile: tests/template_data.json
     path: tests/multi/*
-    data_format: json # Will try to guess from the extension instead (unnecessary in this case)
 ```
