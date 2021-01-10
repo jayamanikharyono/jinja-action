@@ -4,7 +4,7 @@ Jinja2 is a fast and straightforward templating engine. You can use this action 
 
 ![Main CI/CD Pipeline](https://github.com/jayamanikharyono/jinja-action/workflows/Main%20CI/CD%20Pipeline/badge.svg)
 
-## Using Action Inputs
+### Using Action Inputs
 ```yml
 - name: Render Repo Name
   uses: jayamanikharyono/jinja-action@v1
@@ -13,7 +13,7 @@ Jinja2 is a fast and straightforward templating engine. You can use this action 
     path: tests/test_template_single.py
 ```
 
-## Using data files (Json)
+### Using Data Files (Json)
 ```yml
 - name: Render DAGs Dir
   uses: jayamanikharyono/jinja-action@v1
