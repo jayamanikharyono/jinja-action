@@ -1,9 +1,9 @@
 # action.yml
 name: 'Jinja2 Templating'
-description: 'jinja Templating Engine'
+description: 'Jinja Template Engine'
 branding:
   icon: 'copy'
-  color: 'red'
+  color: 'black'
 inputs:
   data:  # id of input
     description: 'key value data'
