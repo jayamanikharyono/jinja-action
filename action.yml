@@ -1,6 +1,6 @@
 # action.yml
 name: 'Jinja2 Templating'
-description: 'Jinja Template Engine'
+description: 'Flexible Code Templating on your workflows by Jinja2'
 branding:
   icon: 'copy'
   color: 'black'
