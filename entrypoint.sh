@@ -19,7 +19,7 @@ then
 
   for eachfile in $dir;
   do
-     jinja2 --strict -D $1 $eachfile > "${eachfile}_"
+     jinja2 --strict -D $1 $eachfile > "${eachfile}_" || exit $?
      echo $eachfile
   done
 
@@ -35,7 +35,7 @@ then
   dir=`ls $3`
   for eachfile in $dir;
   do
-     jinja2 --strict $eachfile $2 --format json > "${eachfile}_"
+     jinja2 --strict $eachfile $2 --format json > "${eachfile}_" || exit $?
      echo $eachfile
   done
 
